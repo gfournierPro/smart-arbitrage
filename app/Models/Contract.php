@@ -17,12 +17,12 @@ class Contract extends Model
         return ['pricing_scheme' => PricingScheme::class];
     }
 
-    public function houselod(): BelongsTo 
+    public function household(): BelongsTo 
     {
         return $this->belongsTo(Household::class);
     }
 
-    public function tariffRate(): HasMany
+    public function tariffRates(): HasMany
     {
         return $this->hasMany(TariffRate::class);
     }

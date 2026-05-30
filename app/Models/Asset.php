@@ -21,7 +21,7 @@ class Asset extends Model
         ];
     }
 
-    public function houselod(): BelongsTo {
+    public function household(): BelongsTo {
         return $this->belongsTo(Household::class);
     }
 
