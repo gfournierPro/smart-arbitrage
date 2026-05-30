@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('contracts', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('household_id')->constrained()->cascadeOnDelete();
             $table->string('provider');
             $table->string('pricing_scheme'); // mappé sur PricingScheme
             $table->string('currency', 3)->default('EUR');
